@@ -1,0 +1,90 @@
+.container {
+    font-size: 12px;
+}
+.header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+.list-group-item {
+    text-align: center;
+    /* display: inline-block;
+    flex-wrap: wrap; */
+}
+.picture {
+    display: inline-block;
+    /* padding: 30px 15px 30px 30px; */
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 20px;
+}
+
+@media only screen
+  and (min-device-width: 968px) 
+  and (max-device-width: 1256px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .header {
+        font-size: 50px;
+    }
+
+    .list-group-item {
+        text-align: center;
+        /* display: inline-block;
+        flex-wrap: wrap; */
+        margin: -28px;
+    }
+    .picture {
+        display: inline-block;
+        padding-left: 7px;
+        padding-right: 7px;       
+    }
+ 
+}
+
+@media only screen
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .header {
+        font-size: 60px;
+    }
+
+    .list-group-item {
+        text-align: center;
+        /* display: inline-block;
+        flex-wrap: wrap; */
+        margin: -10px;
+    }
+    .picture {
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;       
+    }
+ 
+}
+
+@media only screen
+  and (max-device-width: 768px)  
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .header {
+        font-size: 60px;
+    }
+    .list-group-item {
+        text-align: center;
+        /* display: inline-block;
+        flex-wrap: wrap; */
+        margin: -10px;
+    }
+    .picture {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px; 
+        padding-bottom: 20px;     
+    }
+    img {
+        width: 100%;
+    }
+ 
+}
+

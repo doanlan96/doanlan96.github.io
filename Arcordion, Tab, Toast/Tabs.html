@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+<div class="tab">
+  <button class="tablinks" onclick="openTitle(event, 'HTML')">HTML</button>
+  <button class="tablinks" onclick="openTitle(event, 'CSS')">CSS</button>
+  <button class="tablinks" onclick="openTitle(event, 'JavaScript')">JavaScript</button>
+</div>
+<div id="HTML" class="tabcontent">
+  <p>HTML (tiếng Anh, viết tắt cho HyperText Markup Language, hay là 
+    "Ngôn ngữ Đánh dấu Siêu văn bản") là một ngôn ngữ đánh dấu được 
+    thiết kế ra để tạo nên các trang web với các mẩu thông tin được 
+    trình bày trên World Wide Web.</p>
+</div>
+<div id="CSS" class="tabcontent">
+  <p>dịch từ tiếng Anh là Cascading Style Sheets (CSS) - được dùng để 
+    miêu tả cách trình bày các tài liệu viết bằng ngôn ngữ HTML và XHTML.
+    Ngoài ra ngôn ngữ định kiểu theo tầng cũng có thể dùng cho XML, SVG, XUL.
+    Các đặc điểm kỹ thuật của CSS được duy trì bởi World Wide Web Consortium (W3C).</p> 
+</div>
+<div id="JavaScript" class="tabcontent">
+  <p>JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình 
+    kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu.
+    Ngôn ngữ này được dùng rộng rãi cho các trang web, nhưng cũng được dùng 
+    ể tạo khả năng viết script sử dụng các đối tượng nằm sẵn trong các ứng dụng.</p>
+</div>
+
+<a href="/index.html">Quay lại trang chủ</a>
+
+<script>
+function openTitle(evt, titleName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(titleName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
